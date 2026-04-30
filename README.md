@@ -1,6 +1,6 @@
 # 🎓 BrovAI LMS - Modern Learning Management System
 
-![BrovAI Banner](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
+![BrovAI Banner](public/brovai_banner.png)
 
 BrovAI LMS is a premium, high-fidelity Learning Management System designed for deep focus and mastery in modern technology sectors. Built with React 19, Vite, and Framer Motion, it offers a stunning user experience with glassmorphism effects, fluid animations, and robust local persistence.
 
