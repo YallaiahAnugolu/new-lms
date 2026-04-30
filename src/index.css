@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brovai Design System Colors */
+  --color-surface: #fbf8ff;
+  --color-surface-dim: #dbd9e1;
+  --color-surface-bright: #fbf8ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f5f2fb;
+  --color-surface-container: #efecf5;
+  --color-surface-container-high: #eae7ef;
+  --color-surface-container-highest: #e4e1ea;
+  --color-on-surface: #1b1b21;
+  --color-on-surface-variant: #454652;
+  --color-inverse-surface: #303036;
+  --color-inverse-on-surface: #f2eff8;
+  --color-outline: #767683;
+  --color-outline-variant: #c6c5d4;
+  --color-primary: #1D4D4F;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #113637;
+  --color-on-primary-container: #a3ccce;
+  --color-secondary: #2E7D32;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #380b00;
+  --color-on-tertiary: #ffffff;
+  --color-progress-green: #4CAF50;
+  --color-accent-purple: #6200EA;
+  --color-text-primary: #1C1E21;
+  --color-text-secondary: #5F6368;
+
+  /* Typography Paths */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.course-card-shadow {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-card-shadow:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-4px);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-pattern {
+  background-color: #fbf8ff;
+  background-image: 
+    radial-gradient(at 40% 20%, rgba(98, 0, 234, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(29, 77, 79, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(46, 125, 50, 0.05) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(98, 0, 234, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(29, 77, 79, 0.08) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(98, 0, 234, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(46, 125, 50, 0.05) 0px, transparent 50%);
+  background-size: 150% 150%;
+  animation: gradient-shift 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
